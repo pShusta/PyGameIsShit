@@ -16,10 +16,6 @@ public class MovePaddle : MonoBehaviour
         float Z_position = transform.position.z + (Input.GetAxis("Vertical") * paddleSpeed);
         position = new Vector3(Mathf.Clamp(X_position, 1.4f, 11f), .68f, Mathf.Clamp(Z_position, -6.6f, 0f));
         transform.position = position;
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
     }
 
     void OnTriggerEnter(Collider _other)

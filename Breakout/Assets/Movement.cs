@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour {
 
@@ -52,9 +53,12 @@ public class Movement : MonoBehaviour {
         curY = yVelocity;
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>().Play();
     }
+    int score;
     void endgame()
     {
+        score = GameObject.FindGameObjectWithTag("Respawn").GetComponent<GenerateTiles>().getTiles();
         _text.SetActive(true);
+        _text.gameObject.GetComponent<Text>().text = "You're a loser! Score: " + score;
         _player.GetComponent<MovePaddle>().enabled = false;
         GameObject.FindGameObjectWithTag("Respawn").GetComponent<AudioSource>().Play();
     }

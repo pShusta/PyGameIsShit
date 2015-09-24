@@ -28,6 +28,8 @@ public class GenerateTiles : MonoBehaviour {
         }
 	}
 
+    public int getTiles() { return numTiles; }
+
     public void decrement()
     {
         numTiles--;
@@ -47,6 +49,9 @@ public class GenerateTiles : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 	}
 }
