@@ -45,6 +45,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GenerateTiles.cs" />
      <Compile Include="Assets\MovePaddle.cs" />
      <Compile Include="Assets\Movement.cs" />
      <Compile Include="Assets\Tile.cs" />
